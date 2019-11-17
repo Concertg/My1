@@ -21,9 +21,9 @@ def max_rgb_filter(image):
 def nothing(x):
     global value, value3
     print(x)
-    value=x
-    if x%2!=0:
-        value3=x
+    value = x
+    if x % 2 != 0:
+        value3 = x
 
 
 # Для trackbar создаем окно с иминем
