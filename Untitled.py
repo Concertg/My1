@@ -39,8 +39,8 @@ while(1):
     # Делаем снимок
     ret, frame = cap.read()
     cv2.imshow('frame', frame)
-    frame = cv2.resize(frame, (40, 40))
-    frame = cv2.resize(frame, (600, 600))
+    frame = cv2.resize(frame, (80, 40))
+    frame = cv2.resize(frame, (1200, 600))
 
     #gray_image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # max = max_rgb_filter(frame)
