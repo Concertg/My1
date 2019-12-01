@@ -6,13 +6,27 @@ import webbrowser as web
 login = "Concertg"
 email = "sasha.noskov.2227@mail.ru"
 repository = "My1"
-print('-'*130)
+print('-' * 70)
+
 password = input("Ведите пароль: ")
-print("\033[A"+'Ведите пароль: ', '*'*len(password))
+print("\033[A" + 'Ведите пароль: ', '*' * len(password))
+
 if os.name == "nt":
     path = "fi"
 else:
     path = "/home/algoritmika/Документы"
+
+url = "https://api.github.com/"
+auth = (login, password)
+data = {
+    "name": f"{repository}",
+    "description": "python"}
+repos = rs.get(url, auth=auth)
+if repos.status_code == 200:
+    print("[INFO]вход выполнен")
+else:
+    print("[ERROR] вход не вполнен")
+new_repository = rs.post(url, auth=auth, data=js.dumps(data))
 os.chdir(path)
 _, folder = os.path.split(os.getcwd())
 os.system(f"git clone https://github.com/{login}/{repository}.git")
