@@ -3,12 +3,15 @@ import time as tm
 import requests as rs
 import json as js
 import webbrowser as web
-login = "Concertg"
-email = "sasha.noskov.2227@mail.ru"
-repository = "My1"
+import window
+
+print(window.login)
+print(window.)
+login = window.login
+email = window.maill
+repository = window.repository
 print('-' * 70)
-password = input("Ведите пароль: ")
-print("\033[A" + 'Ведите пароль: ', '*' * len(password))
+password = window.window.
 
 if os.name == "nt":
     path = "fi"
